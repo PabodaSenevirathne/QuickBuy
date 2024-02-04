@@ -1,0 +1,11 @@
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+  
+  .product-card {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  
