@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Product.css';
 
 function Product({ product, addToCart }) {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1); 
 
   const handleAddToCart = () => {
     addToCart({ ...product, quantity });
