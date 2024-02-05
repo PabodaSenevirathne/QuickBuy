@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ShoppingCart from './pages/ShoppingCart';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Account from './pages/Account';
 
 function App() {
@@ -26,12 +28,14 @@ function App() {
   return (
     <Router>
       <div>
+      <Header /> {/* Include Header component */}
         <Navbar cartItems={cartItems} />
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} />} />
           <Route path="/cart" element={<ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} />} />
           <Route path="/account" element={<Account />} />
         </Routes>
+        <Footer /> {/* Include Footer component */}
       </div>
     </Router>
   );
