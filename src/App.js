@@ -1,5 +1,3 @@
-// App.js
-
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -28,14 +26,14 @@ function App() {
   return (
     <Router>
       <div>
-      <Header /> {/* Include Header component */}
+      <Header />
         <Navbar cartItems={cartItems} />
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} />} />
           <Route path="/cart" element={<ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} />} />
           <Route path="/account" element={<Account />} />
         </Routes>
-        <Footer /> {/* Include Footer component */}
+        <Footer />
       </div>
     </Router>
   );

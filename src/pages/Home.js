@@ -1,5 +1,7 @@
 import React from 'react';
 import Product from '../components/Product';
+import CustomCarousel from '../components/CustomCarousel';
+
 import '../styles/Home.css';
 
 function Home({ addToCart }) {
@@ -9,16 +11,35 @@ function Home({ addToCart }) {
     { id: 3, name: 'Product 3', price: 15, image: 'product3.jpg' },
     { id: 4, name: 'Product 4', price: 10, image: 'product4.jpg' },
     { id: 5, name: 'Product 5', price: 20, image: 'product5.jpg' },
+    { id: 3, name: 'Product 3', price: 15, image: 'product3.jpg' },
+    { id: 4, name: 'Product 4', price: 10, image: 'product4.jpg' },
+    { id: 5, name: 'Product 5', price: 20, image: 'product5.jpg' },
   ];
+
+  const productsRow1 = products.slice(0, Math.ceil(products.length / 2));
+  const productsRow2 = products.slice(Math.ceil(products.length / 2));
 
   return (
     <div>
-      <h2>Products</h2>
-      <section className="cards">
-        {products.map((product) => (
-          <Product key={product.id} product={product} addToCart={addToCart} className="product-card" />
-        ))}
-      </section>
+      <CustomCarousel/>
+      <h2>Best Sellers</h2>
+      <div className="row">
+        <div className="col">
+          <section className="cards">
+            {productsRow1.map((product) => (
+              <Product key={product.id} product={product} addToCart={addToCart} className="product-card" />
+            ))}
+          </section>
+        </div>
+        <h2>New Arrivals</h2>
+        <div className="col">
+          <section className="cards">
+            {productsRow2.map((product) => (
+              <Product key={product.id} product={product} addToCart={addToCart} className="product-card" />
+            ))}
+          </section>
+        </div>
+      </div>
     </div>
   );
 }
