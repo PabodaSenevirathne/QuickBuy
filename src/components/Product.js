@@ -1,24 +1,16 @@
-import React, { useState } from 'react';
-import '../styles/Product.css';
+// Product.js
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Product({ product, addToCart }) {
-  const [quantity, setQuantity] = useState(1); 
-
-  const handleAddToCart = () => {
-    addToCart({ ...product, quantity });
-  };
-
+function Product({ product }) {
   return (
-    <div className="product"> {/* Apply 'product' class */}
+    <div className="product">
       <img src={product.image} alt={product.name} />
       <h3>{product.name}</h3>
       <p>${product.price}</p>
-      <input
-        type="number"
-        value={quantity}
-        onChange={(e) => setQuantity(e.target.value)}
-      />
-      <button onClick={handleAddToCart}>Add to Cart</button>
+      <Link to={`/products/${product.id}`}>
+        <button className="view-details-button">View Details</button>
+      </Link>
     </div>
   );
 }

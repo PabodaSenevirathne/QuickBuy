@@ -1,0 +1,24 @@
+/* ProductDetail.css */
+
+.product-detail {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.product-detail-container {
+  border: 1px solid #ccc; /* Add border */
+  padding: 20px; /* Add padding for spacing */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  max-width: 600px; /* Optionally set a max width */
+}
+
+.product-detail img {
+  max-width: 50%; /* Adjust image width */
+  height: auto;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.product-info {
+  flex: 1; /* Take remaining space */
+}

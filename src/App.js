@@ -6,10 +6,13 @@ import ShoppingCart from './pages/ShoppingCart';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Account from './pages/Account';
+import ProductDetail from './pages/ProductDetail';
+import { products } from './utils/ProductInfo';
 
 function App() {
   // Define state for cart items
   const [cartItems, setCartItems] = useState([]);
+
 
   // Function to add item to cart
   const addToCart = (item) => {
@@ -29,9 +32,10 @@ function App() {
       <Header />
         <Navbar cartItems={cartItems} />
         <Routes>
-          <Route path="/" element={<Home addToCart={addToCart} />} />
+          <Route path="/" element={<Home addToCart={addToCart} products={products}/>} />
           <Route path="/cart" element={<ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/products/:id" element={<ProductDetail products={products} addToCart={addToCart}/>} /> 
         </Routes>
         <Footer />
       </div>
