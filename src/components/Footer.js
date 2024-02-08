@@ -6,7 +6,9 @@ import '../styles/Footer.css';
 function Footer() {
   return (
     <footer className="footer">
-      <p>&copy; 2024 Shopping Website</p>
+      <p>
+            &copy; 2023-2024 by Paboda Senervirathne . All Rights Reserved
+        </p>
     </footer>
   );
 }

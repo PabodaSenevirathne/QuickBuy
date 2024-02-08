@@ -18,7 +18,7 @@ function Home({ products, addToCart }) {
   return (
     <div>
         <CustomCarousel />
-        <h2>Best Sellers</h2>
+        <h2 className="section-title">Best Sellers</h2>
         <div className="row">
           <div className="col">
             <section className="cards">
@@ -27,7 +27,7 @@ function Home({ products, addToCart }) {
               ))}
             </section>
           </div>
-          <h2>New Arrivals</h2>
+          <h2 className="section-title">New Arrivals</h2>
           <div className="col">
             <section className="cards">
               {productsRow2.map((product) => (
