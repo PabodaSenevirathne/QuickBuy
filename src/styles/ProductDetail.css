@@ -1,24 +1,27 @@
-/* ProductDetail.css */
-
 .product-detail {
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center; 
+  margin-top: 100px;
 }
 
 .product-detail-container {
-  border: 1px solid #ccc; /* Add border */
-  padding: 20px; /* Add padding for spacing */
-  display: flex; /* Use flexbox */
-  align-items: center; /* Center vertically */
-  max-width: 600px; /* Optionally set a max width */
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
 }
 
 .product-detail img {
-  max-width: 50%; /* Adjust image width */
+  max-width: 50%;
   height: auto;
-  margin-right: 20px; /* Adjust as needed */
+  margin-right: 20px;
 }
 
 .product-info {
-  flex: 1; /* Take remaining space */
+  flex: 1;
+}
+
+.content {
+  min-height: calc(100vh - 100px);
 }

@@ -20,6 +20,11 @@ function Account() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    alert(`Account Created Sucessfully:
+      First Name: ${formData.firstName}
+      Last Name: ${formData.lastName}
+      Email: ${formData.email}
+      Shipping Address: ${formData.shippingAddress}`);
     setFormData({
       firstName: '',
       lastName: '',
@@ -30,7 +35,7 @@ function Account() {
 
   return (
     <div className="account-container">
-      <h2>Create or Update Account</h2>
+      <h2>Create an Account</h2>
       <form onSubmit={handleSubmit} className="account-form">
         <div>
           <label htmlFor="firstName">First Name:</label>
