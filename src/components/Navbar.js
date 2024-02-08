@@ -15,6 +15,10 @@ function Navbar({ cartItems }) {
         <li>
           <Link to="/account">Account</Link>
         </li>
+        <li>
+          <Link to="/about-us">About Us</Link>
+        </li>
+
       </ul>
     </nav>
   );

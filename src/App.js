@@ -6,6 +6,7 @@ import ShoppingCart from './pages/ShoppingCart';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Account from './pages/Account';
+import AboutUs from './pages/AboutUs';
 import ProductDetail from './pages/ProductDetail';
 import { products } from './utils/ProductInfo';
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<Home addToCart={addToCart} products={products}/>} />
           <Route path="/cart" element={<ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/products/:id" element={<ProductDetail products={products} addToCart={addToCart}/>} /> 
         </Routes>
         <Footer />
