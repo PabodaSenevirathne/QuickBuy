@@ -32,6 +32,7 @@ function App() {
       <div>
       <Header />
         <Navbar cartItems={cartItems} />
+        <div className="content">
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} products={products}/>} />
           <Route path="/cart" element={<ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} />} />
@@ -39,6 +40,7 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/products/:id" element={<ProductDetail products={products} addToCart={addToCart}/>} /> 
         </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

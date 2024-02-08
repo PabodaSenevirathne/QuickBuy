@@ -1,8 +1,6 @@
-/* Home.css */
-
 .cards {
   display: flex;
-  justify-content: space-between; /* Distribute space between cards */
+  justify-content: space-between;
   padding: 20px;
 }
 
@@ -13,7 +11,7 @@
   margin-bottom: 20px;
   text-align: center;
   width: 30%;
-  margin: 0 10px; /* Add margin around each product card */
+  margin: 0 10px;
 }
 
 .product img {
@@ -52,8 +50,8 @@
 }
 
 .section-title {
-  font-size: 1.5rem; /* Medium font size */
-  color: #666; /* Slightly darker color */
-  margin-top: 40px; /* Add space above the section titles */
-  margin-bottom: 10px; /* Add space below the section titles */
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
