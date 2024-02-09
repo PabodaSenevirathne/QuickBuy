@@ -14,7 +14,7 @@ function ShoppingCart({ cartItems, removeFromCart }) {
               <li key={index}>
                 <img src={item.image} alt={item.name} />
                 <div>
-                  <h3>{item.name}</h3>
+                  <h4>{item.name}</h4>
                   <p>Quantity: {item.quantity}</p>
                   <p>Price: ${item.price}</p>
                 </div>
