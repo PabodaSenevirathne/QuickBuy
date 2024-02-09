@@ -27,6 +27,15 @@ function App() {
     setCartItems(newCartItems);
   };
 
+  // Function to update the quantity
+  const updateQuantity = (indexToUpdate, newQuantity) => {
+    setCartItems(prevItems => {
+      const updatedItems = [...prevItems];
+      updatedItems[indexToUpdate].quantity = newQuantity;
+      return updatedItems;
+    });
+  };
+
   return (
     <Router>
       <div>
@@ -35,7 +44,7 @@ function App() {
         <div className="content">
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} products={products}/>} />
-          <Route path="/cart" element={<ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} />} />
+          <Route path="/cart" element={<ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} updateQuantity={updateQuantity}/>} />
           <Route path="/account" element={<Account />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/products/:id" element={<ProductDetail products={products} addToCart={addToCart}/>} /> 

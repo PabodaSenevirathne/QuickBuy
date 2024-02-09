@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/ShoppingCart.css';
 
-function ShoppingCart({ cartItems, removeFromCart }) {
+function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
+  const handleQuantityChange = (index, quantity) => {
+    updateQuantity(index, quantity);
+  };
+
   return (
     <div className="shopping-cart">
       <h2>Shopping Cart</h2>
@@ -15,7 +19,14 @@ function ShoppingCart({ cartItems, removeFromCart }) {
                 <img src={item.image} alt={item.name} />
                 <div>
                   <h4>{item.name}</h4>
-                  <p>Quantity: {item.quantity}</p>
+                  <label htmlFor={`quantity-${index}`}>Quantity: </label>
+                  <input
+                    type="number"
+                    id={`quantity-${index}`}
+                    value={item.quantity}
+                    onChange={(e) => handleQuantityChange(index, parseInt(e.target.value))}
+                    min={1}
+                  />
                   <p>Price: ${item.price}</p>
                 </div>
                 <button className="remove-button" onClick={() => removeFromCart(index)}>Remove</button>
