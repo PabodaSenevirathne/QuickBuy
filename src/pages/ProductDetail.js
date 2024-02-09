@@ -34,6 +34,7 @@ const ProductDetail = ({ products, addToCart }) => {
           <div className="product-info">
             <h2>{product.name}</h2>
             <p>Price: ${product.price}</p>
+            <div className="quantity-input">
             <label htmlFor="quantity">Quantity:</label>
             <input
               type="number"
@@ -43,6 +44,7 @@ const ProductDetail = ({ products, addToCart }) => {
               min={1}
             />
             <button onClick={() => handleAddToCart(product.id)} className="btn btn-primary">Add to Cart</button>
+            </div>
           </div>
         </div>
       )}
