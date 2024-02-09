@@ -17,8 +17,8 @@ function ShoppingCart({ cartItems, removeFromCart }) {
                   <h3>{item.name}</h3>
                   <p>Quantity: {item.quantity}</p>
                   <p>Price: ${item.price}</p>
-                  <button onClick={() => removeFromCart(index)}>Remove</button>
                 </div>
+                <button className="remove-button" onClick={() => removeFromCart(index)}>Remove</button>
               </li>
             ))}
           </ul>
