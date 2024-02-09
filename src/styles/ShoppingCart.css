@@ -69,3 +69,7 @@
 .shopping-cart .remove-button {
   background-color: #dc3545; /* Red color for remove button */
 }
+
+.shopping-cart .checkout-button{
+  margin-top: 15px;
+}

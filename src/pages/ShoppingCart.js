@@ -22,7 +22,7 @@ function ShoppingCart({ cartItems, removeFromCart }) {
               </li>
             ))}
           </ul>
-          <button>Checkout</button>
+          <button className="checkout-button">Checkout</button>
         </div>
       )}
     </div>
