@@ -35,7 +35,7 @@ const ProductDetail = ({ products, addToCart }) => {
             <h2>{product.name}</h2>
             <p>Price: ${product.price}</p>
             <div className="quantity-input">
-            <label htmlFor="quantity">Quantity:</label>
+            <label htmlFor="quantity">Quantity: </label>
             <input
               type="number"
               id="quantity"

@@ -9,7 +9,8 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 800px;
+  max-width: 600px; /* Set the same max-width */
+  width: 100%; /* Ensure it takes up the full width of the container */
 }
 
 .product-detail img {
