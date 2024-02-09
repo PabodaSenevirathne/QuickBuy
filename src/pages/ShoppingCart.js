@@ -6,7 +6,7 @@ function ShoppingCart({ cartItems, removeFromCart }) {
     <div className="shopping-cart">
       <h2>Shopping Cart</h2>
       {cartItems.length === 0 ? (
-        <p>Your shopping cart is empty.</p>
+        <p className='message'>Your shopping cart is empty.</p>
       ) : (
         <div>
           <ul>
