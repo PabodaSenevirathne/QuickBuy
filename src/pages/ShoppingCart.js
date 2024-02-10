@@ -6,6 +6,14 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
     updateQuantity(index, quantity);
   };
 
+
+  const handleRemoveFromCart = (index) => {
+    const removedItem = cartItems[index].name;
+    removeFromCart(index);
+    alert(`"${removedItem}" removed from the cart.`);
+  };
+
+
   return (
     <div className="shopping-cart">
       <h2>Shopping Cart</h2>
@@ -31,7 +39,7 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
                   </div>
                   <p>Price: ${item.price}</p>
                 </div>
-                <button className="remove-button" onClick={() => removeFromCart(index)}>Remove</button>
+                <button className="remove-button" onClick={() => handleRemoveFromCart(index)}>Remove</button>
               </li>
             ))}
           </ul>
