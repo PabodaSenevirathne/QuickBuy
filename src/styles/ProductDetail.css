@@ -1,16 +1,17 @@
 .product-detail {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   margin-top: 100px;
 }
 
 .product-detail-container {
-  border: 1px solid #ccc;
-  padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px; /* Set the same max-width */
-  width: 100%; /* Ensure it takes up the full width of the container */
+  max-width: 850px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 100px;
 }
 
 .product-detail img {
@@ -21,10 +22,6 @@
 
 .product-info {
   flex: 1;
-}
-
-.content {
-  min-height: calc(100vh - 100px);
 }
 
 .quantity-input {
