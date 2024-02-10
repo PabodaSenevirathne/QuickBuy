@@ -17,7 +17,7 @@ function CustomCarousel() {
         />
         <Carousel.Caption>
           {/* <h3>Our Shop</h3> */}
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <p>Save up to 60% on clearance styles. *Prices as marked.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -27,8 +27,8 @@ function CustomCarousel() {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>Explore Shoes</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>NEW SNEAKER ARRIVALS</h3>
+          <p>Sign Up For Email & Get 50 Points!</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -39,7 +39,8 @@ function CustomCarousel() {
         />
         <Carousel.Caption>
           {/* <h3>Wedding Shoes</h3> */}
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <p>Become a Shoe VIP & get free shipping, 5% back in rewards for every purchase, exclusive offers and more
+</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

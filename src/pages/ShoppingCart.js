@@ -19,6 +19,7 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
                 <img src={item.image} alt={item.name} />
                 <div>
                   <h4>{item.name}</h4>
+                  <div className="quantity-input">
                   <label htmlFor={`quantity-${index}`}>Quantity: </label>
                   <input
                     type="number"
@@ -27,6 +28,7 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
                     onChange={(e) => handleQuantityChange(index, parseInt(e.target.value))}
                     min={1}
                   />
+                  </div>
                   <p>Price: ${item.price}</p>
                 </div>
                 <button className="remove-button" onClick={() => removeFromCart(index)}>Remove</button>

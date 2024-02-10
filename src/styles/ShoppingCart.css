@@ -73,3 +73,8 @@
 .shopping-cart .checkout-button{
   margin-top: 15px;
 }
+
+.quantity-input input[type="number"] {
+  margin-right: 10px;
+  margin-left: 5px;
+}
