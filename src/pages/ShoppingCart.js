@@ -67,7 +67,7 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
               </li>
             ))}
           </ul>
-          <p>Total Value: ${totalValue.toFixed(2)}</p>
+          <p className="total-value">Total Value: ${totalValue.toFixed(2)}</p>
           <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
         </div>
       )}

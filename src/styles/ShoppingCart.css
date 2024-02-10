@@ -20,7 +20,7 @@
 .shopping-cart li {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Align items evenly */
+  justify-content: space-between;
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
 }
@@ -30,7 +30,7 @@
 }
 
 .shopping-cart img {
-  width: 100px;
+  width: 150px;
   height: 100px;
   margin-right: 20px;
 }
@@ -67,7 +67,7 @@
 }
 
 .shopping-cart .remove-button {
-  background-color: #dc3545; /* Red color for remove button */
+  background-color: #dc3545;
 }
 
 .shopping-cart .checkout-button{
@@ -78,3 +78,13 @@
   margin-right: 10px;
   margin-left: 5px;
 }
+
+.shopping-cart .total-value {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: right;
+  flex: 1;
+}
+
+
