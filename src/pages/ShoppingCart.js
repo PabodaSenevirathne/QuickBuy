@@ -14,6 +14,11 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
   };
 
 
+  const handleCheckout = () => {
+    alert("You have checked out successfully!");
+    
+  };
+
   return (
     <div className="shopping-cart">
       <h2>Shopping Cart</h2>
@@ -43,7 +48,7 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
               </li>
             ))}
           </ul>
-          <button className="checkout-button">Checkout</button>
+          <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
         </div>
       )}
     </div>
