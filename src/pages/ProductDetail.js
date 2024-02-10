@@ -22,6 +22,7 @@ const ProductDetail = ({ products, addToCart }) => {
 
     console.log("pro" + pro);
     addToCart(pro);
+    alert('Product successfully added to cart!');
   };
 
   const product = products.find((p) => p.id === parseInt(id));
