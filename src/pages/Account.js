@@ -20,11 +20,7 @@ function Account() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    alert(`Account Created Sucessfully:
-      First Name: ${formData.firstName}
-      Last Name: ${formData.lastName}
-      Email: ${formData.email}
-      Shipping Address: ${formData.shippingAddress}`);
+    alert(`Account Created Sucessfully!`);
     setFormData({
       firstName: '',
       lastName: '',
