@@ -17,7 +17,19 @@ function App() {
 
   // Function to add item to cart
   const addToCart = (item) => {
-    setCartItems([...cartItems, item]);
+
+    const existingItemIndex = cartItems.findIndex(cartItem => cartItem.id === item.id);
+    console.log(existingItemIndex);
+
+    if (existingItemIndex !== -1) {
+      // If item already exists, update its quantity
+      const updatedCartItems = [...cartItems];
+      updatedCartItems[existingItemIndex].quantity += item.quantity;
+      setCartItems(updatedCartItems);
+  } else {
+      // If item does not exist, add it to the cart
+      setCartItems(prevCartItems => [...prevCartItems, item]);
+  }
   };
 
   // Function to remove item from cart
@@ -47,7 +59,7 @@ function App() {
           <Route path="/cart" element={<ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} updateQuantity={updateQuantity}/>} />
           <Route path="/account" element={<Account />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/products/:id" element={<ProductDetail products={products} addToCart={addToCart}/>} /> 
+          <Route path="/products/:id" element={<ProductDetail products={products} addToCart={addToCart} cartItems={cartItems}/>} /> 
         </Routes>
         </div>
         <Footer />

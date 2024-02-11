@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 100px;
   margin-bottom: 100px;
   background-color: #CDAB7A;
@@ -11,6 +11,7 @@
 
 .shopping-cart h2 {
   text-align: center;
+  color: #402220;
 }
 
 .shopping-cart ul {
@@ -69,10 +70,14 @@
 
 .shopping-cart .remove-button {
   background-color: #dc3545;
+  border: none;
+  border-radius: 10px;
 }
 
-.shopping-cart .checkout-button{
-  margin-top: 15px;
+.shopping-cart .checkout-button {
+  margin-top: 30px;
+  border: none;
+  border-radius: 10px;
 }
 
 .quantity-input input[type="number"] {
@@ -87,5 +92,3 @@
   text-align: right;
   flex: 1;
 }
-
-

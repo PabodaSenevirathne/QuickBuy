@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/ShoppingCart.css';
+import { message } from 'antd';
+import { CloseOutlined } from '@ant-design/icons';
 
 function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
   const [totalValue, setTotalValue] = useState(0);
+  const [messageApi, contextHolder] = message.useMessage();
 
   const handleQuantityChange = (index, quantity) => {
     updateQuantity(index, quantity);
@@ -12,12 +15,14 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
   const handleRemoveFromCart = (index) => {
     const removedItem = cartItems[index].name;
     removeFromCart(index);
-    alert(`"${removedItem}" removed from the cart.`);
+    // alert(`"${removedItem}" removed from the cart.`);
+    messageApi.info(`${removedItem} removed from the cart.`);
     updateTotalValue();
   };
 
   const handleCheckout = () => {
-    alert("You have checked out successfully!");
+    // alert("You have checked out successfully!");
+    messageApi.info('You have checked out successfully!');
   };
 
   // Calculate total value
@@ -40,6 +45,7 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
 
   return (
     <div className="shopping-cart">
+       {contextHolder}
       <h2>Shopping Cart</h2>
       {cartItems.length === 0 ? (
         <p className='message'>Your shopping cart is empty.</p>
@@ -63,7 +69,7 @@ function ShoppingCart({ cartItems, removeFromCart, updateQuantity }) {
                   </div>
                   <p>Price: ${item.price}</p>
                 </div>
-                <button className="remove-button" onClick={() => handleRemoveFromCart(index)}>Remove</button>
+                <button className="remove-button" onClick={() => handleRemoveFromCart(index)}><CloseOutlined /></button>
               </li>
             ))}
           </ul>

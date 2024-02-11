@@ -13,6 +13,7 @@
   padding: 20px;
   margin-bottom: 100px;
   background-color: #CDAB7A;
+  border-radius: 10px;
 }
 
 .product-detail img {
@@ -37,14 +38,19 @@
 }
 
 .view-details-button {
-  padding: 5px 5px;
+  padding: 10px 10px;
   background-color: #402220;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .view-details-button:hover {
   background-color: #845745;
+}
+
+.product-detail h2 {
+  text-align: center;
+  color: #402220;
 }

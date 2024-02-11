@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/ProductDetail.css';
+import { message } from 'antd';
 
-const ProductDetail = ({ products, addToCart }) => {
+const ProductDetail = ({ products, addToCart, cartItems }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
+  const [messageApi, contextHolder] = message.useMessage();
 
   const handleQuantityChange = (e) => {
     const value = parseInt(e.target.value);
@@ -16,7 +18,8 @@ const ProductDetail = ({ products, addToCart }) => {
     if (product) {
       const pro = { ...product, quantity: quantity || 1 };
       addToCart(pro);
-      alert('Product successfully added to cart!');
+      // alert('Product successfully added to cart!');
+      messageApi.info('Product successfully added to cart!');
     }
   };
 
@@ -41,7 +44,8 @@ const ProductDetail = ({ products, addToCart }) => {
                 onChange={handleQuantityChange}
                 min={1}
               />
-              <button onClick={() => handleAddToCart(product.id)} className="view-details-button">Add to Cart</button>
+              {contextHolder}
+              <button onClick={() => handleAddToCart(product.id)} className="view-details-button">{cartItems.findIndex(cartItem => cartItem.id === product.id) !== -1 ? "Update Cart" : "Add to Cart"} </button>
             </div>
           </div>
         </div>

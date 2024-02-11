@@ -1,7 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Account.css';
+import { message } from 'antd';
 
 function Account() {
+
+  const [messageApi, contextHolder] = message.useMessage();
+  const [redirecting, setRedirecting] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    let timeoutId;
+    if (redirecting) {
+      timeoutId = setTimeout(() => {
+        navigate('/');
+      }, 1500);
+    }
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [redirecting, navigate]);
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -20,18 +39,25 @@ function Account() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    alert(`Account Created Sucessfully!`);
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      shippingAddress: '',
-    });
+    if (formData.firstName === '' || formData.lastName === '' || formData.email === '' || formData.shippingAddress === '') {
+      messageApi.info('Please fill all the fields to continue!');
+    } else {
+      // alert(`Account created sucessfully!`);
+      messageApi.info('Account created sucessfully!');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        shippingAddress: '',
+      });
+      setRedirecting(true);
+    }
   };
 
   return (
     <div className="account-container">
       <h2>Create an Account</h2>
+      {contextHolder}
       <form onSubmit={handleSubmit} className="account-form">
         <div>
           <label htmlFor="firstName">First Name:</label>

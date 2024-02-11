@@ -1,6 +1,6 @@
 .product {
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -33,7 +33,7 @@
     color: #fff;
     padding: 8px 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
   }
   
@@ -46,8 +46,9 @@
   background-color: #845745;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  
 }
 
 .view-details-button:hover {
