@@ -24,12 +24,13 @@
   flex: 1;
 }
 
-.quantity-input {
+.quantity-input-product-details {
   display: flex;
   align-items: center;
+  margin-bottom: 80px;
 }
 
-.quantity-input input[type="number"] {
+.quantity-input-product-details input[type="number"] {
   margin-right: 10px;
   margin-left: 5px;
 }

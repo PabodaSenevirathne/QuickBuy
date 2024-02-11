@@ -31,9 +31,11 @@ const ProductDetail = ({ products, addToCart }) => {
         <div className="product-detail-container">
           <img src={product.image} alt={product.name} />
           <div className="product-info">
-            <h2>{product.name}</h2>
+          <h2>Product Details</h2>
+            <p>Canada’s Largest Selection Of Branded Footwear.</p>
+            <h4>{product.name}</h4>
             <p>Price: ${product.price}</p>
-            <div className="quantity-input">
+            <div className="quantity-input-product-details">
             <label htmlFor="quantity">Quantity: </label>
             <input
               type="number"
