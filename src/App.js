@@ -11,35 +11,35 @@ import ProductDetail from './pages/ProductDetail';
 import { products } from './utils/ProductInfo';
 
 function App() {
-  // Define state for cart items
+  // Define the state
   const [cartItems, setCartItems] = useState([]);
 
 
-  // Function to add item to cart
+  // Add item to cart
   const addToCart = (item) => {
 
     const existingItemIndex = cartItems.findIndex(cartItem => cartItem.id === item.id);
     console.log(existingItemIndex);
 
     if (existingItemIndex !== -1) {
-      // If item already exists, update its quantity
+      // If item already exists, update the quantity
       const updatedCartItems = [...cartItems];
       updatedCartItems[existingItemIndex].quantity += item.quantity;
       setCartItems(updatedCartItems);
   } else {
-      // If item does not exist, add it to the cart
+      // If item does not exist, add item to the cart
       setCartItems(prevCartItems => [...prevCartItems, item]);
   }
   };
 
-  // Function to remove item from cart
+  // Remove items from cart
   const removeFromCart = (index) => {
     const newCartItems = [...cartItems];
     newCartItems.splice(index, 1);
     setCartItems(newCartItems);
   };
 
-  // Function to update the quantity
+  // Update the quantity
   const updateQuantity = (indexToUpdate, newQuantity) => {
     setCartItems(prevItems => {
       const updatedItems = [...prevItems];
