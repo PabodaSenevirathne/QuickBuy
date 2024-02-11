@@ -2,7 +2,7 @@
   background-color: #CD924A;
   padding: 20px;
   position: relative;
-  height: 30px;
+  height: 40px;
 }
 
 .navbar ul {
@@ -21,4 +21,5 @@
 .navbar ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
 }

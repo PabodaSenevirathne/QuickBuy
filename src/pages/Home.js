@@ -9,10 +9,6 @@ function Home({ products, addToCart }) {
   const productsRow1 = products.slice(0, Math.ceil(products.length / 2));
   const productsRow2 = products.slice(Math.ceil(products.length / 2));
 
-  const getProductById = (id) => {
-    return products.find(product => product.id === id);
-  }
-
   return (
     <div>
         <CustomCarousel />

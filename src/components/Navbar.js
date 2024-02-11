@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
+import { ShoppingCartOutlined } from '@ant-design/icons';
+import { Badge } from 'antd';
 
 function Navbar({ cartItems }) {
   return (
@@ -10,13 +12,17 @@ function Navbar({ cartItems }) {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/cart">Cart ({cartItems.length})</Link>
-        </li>
-        <li>
           <Link to="/account">Account</Link>
         </li>
         <li>
           <Link to="/about-us">About Us</Link>
+        </li>
+        <li>
+          <Link to="/cart">
+            <Badge size="small" count={cartItems.length}>
+              <ShoppingCartOutlined style={{ fontSize: '24px', color: '#fff' }} />
+            </Badge>
+          </Link>
         </li>
 
       </ul>
