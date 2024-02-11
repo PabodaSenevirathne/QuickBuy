@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Carousel.css'; 
-import image1 from '../images/c-4.jpg'; // Import your images
+import image1 from '../images/c-4.jpg';
 import image2 from '../images/c-5.jpg';
 import image3 from '../images/c-6.jpg';
 

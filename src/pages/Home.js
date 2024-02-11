@@ -1,5 +1,3 @@
-// Home.js
-
 import React from 'react';
 import Product from '../components/Product';
 import CustomCarousel from '../components/CustomCarousel';

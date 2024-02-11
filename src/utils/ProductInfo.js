@@ -9,7 +9,6 @@ const products = [
     { id: 8, name: 'Chelsea Boots', price: 200, image: require('../images/p-8.jpg') },
 ];
 
-
 export {
     products
 };

@@ -1,8 +1,6 @@
-// ProductDetail.js
-
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import '../styles/ProductDetail.css'; // Import the CSS file
+import '../styles/ProductDetail.css';
 
 const ProductDetail = ({ products, addToCart }) => {
   const { id } = useParams();
