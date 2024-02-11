@@ -6,6 +6,7 @@
     border-radius: 5px;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: #CDAB7A;
   }
   
   .account-container h2 {
@@ -35,7 +36,7 @@
   }
   
   .account-form button {
-    background-color: #007bff;
+    background-color:#402220;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -44,6 +45,6 @@
   }
   
   .account-form button:hover {
-    background-color: #0056b3;
+    background-color: #CD924A;
   }
   

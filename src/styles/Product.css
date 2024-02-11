@@ -29,7 +29,7 @@
   }
   
   .product button {
-    background-color: #007bff;
+    background-color: #845745;
     color: #fff;
     padding: 8px 16px;
     border: none;
@@ -38,12 +38,12 @@
   }
   
   .product button:hover {
-    background-color: #0056b3;
+    background-color: #845745;
   }
 
 .view-details-button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #845745;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -51,7 +51,7 @@
 }
 
 .view-details-button:hover {
-  background-color: #0056b3;
+  background-color: #845745;
 }
 
   

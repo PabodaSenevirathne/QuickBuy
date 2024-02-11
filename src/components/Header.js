@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/p-1.jpg';
+import logo from '../images/logo.jpg';
 import '../styles/Header.css';
 
 function Header() {
@@ -9,7 +9,7 @@ function Header() {
         <img src={logo} alt="Your Logo" width="100" height="100" />
       </div>
       <div className="title">
-        <h1>Welcome to Our Online Store</h1>
+        <h2>Welcome to Our Online Store</h2>
         <p>Your One-Stop Shop for Quality Products</p>
       </div>
     </header>
