@@ -12,6 +12,7 @@
   border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 100px;
+  background-color: #CDAB7A;
 }
 
 .product-detail img {
@@ -33,4 +34,17 @@
 .quantity-input-product-details input[type="number"] {
   margin-right: 10px;
   margin-left: 5px;
+}
+
+.view-details-button {
+  padding: 5px 5px;
+  background-color: #402220;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-details-button:hover {
+  background-color: #845745;
 }

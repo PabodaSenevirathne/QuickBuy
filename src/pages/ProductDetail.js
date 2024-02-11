@@ -44,7 +44,7 @@ const ProductDetail = ({ products, addToCart }) => {
               onChange={handleQuantityChange}
               min={1}
             />
-            <button onClick={() => handleAddToCart(product.id)} className="btn btn-primary">Add to Cart</button>
+            <button onClick={() => handleAddToCart(product.id)} className="view-details-button">Add to Cart</button>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ function CustomCarousel() {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>NEW SNEAKER ARRIVALS</h3>
+          {/* <h3>NEW SNEAKER ARRIVALS</h3> */}
           <p>Sign Up For Email & Get 50 Points!</p>
         </Carousel.Caption>
       </Carousel.Item>
